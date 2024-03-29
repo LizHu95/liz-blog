@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "dev:server": "cd services && yarn start",
+    "build": "nvm use && astro build",
     "preview": "astro preview",
     "clean": "rimraf dist",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx,.astro .",
     "build-types": "tsc --noEmit --pretty",
     "prepare": "husky install",
-    "build": "chmod -x ./deploy.sh && sh ./deploy.sh"
+    "deploy": "chmod -x ./deploy.sh && sh ./deploy.sh"
   },
   "devDependencies": {
     "@astrojs/react": "^3.0.7",
