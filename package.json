@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "cd services && yarn start",
+    "dev:server": "cd services && yarn start",
     "build": "astro build",
     "preview": "astro preview",
     "clean": "rimraf dist",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx,.astro .",
     "build-types": "tsc --noEmit --pretty",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "chmod -x ./deploy.sh && sh ./deploy.sh"
   },
   "devDependencies": {
     "@astrojs/react": "^3.0.7",
@@ -25,6 +26,7 @@
     "@types/react": "^18.2.42",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "archiver": "^7.0.1",
     "astro": "4.0.2",
     "astro-eslint-parser": "^0.16.0",
     "astro-imagetools": "^0.6.17",
