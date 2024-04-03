@@ -1,0 +1,44 @@
+---
+import type {
+FrontmatterPage,
+} from 'astro-boilerplate-components';
+import {
+PaginationHeader,
+Section,
+} from 'astro-boilerplate-components';
+
+import { AppConfig } from '@/utils/AppConfig';
+
+import Base from '@/templates/Base.astro';
+
+type GetStaticPaths = {
+  paginate: any;
+}; // Overrides `GetStaticPathsOptions` types from Astro
+
+export async function getStaticPaths({ paginate }: GetStaticPaths) { 
+
+  // Return a paginated collection of paths for all posts
+  return paginate([{a:1}], { pageSize: 6 });
+}
+
+interface Props {
+  page: FrontmatterPage;
+}
+
+const { page } = Astro.props as Props;
+const titleSuffix = ` - ${AppConfig.site_name}`;
+const titleBase = `Blog page ${page.currentPage}`;
+const title = titleBase + titleSuffix;
+const description =
+  'Pagination example built with Astro styled with Tailwind CSS.';
+---
+
+<Base head={{ title, description }}>
+  <Section>
+    <PaginationHeader
+      title='ThreeJS'
+      description='This is magic demo.'
+    />
+  </Section>
+  <Section><div>sda</div></Section>
+</Base>

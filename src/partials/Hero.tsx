@@ -3,7 +3,7 @@ import {
   HeroAvatar,
   HeroSocial,
   Section,
-} from 'astro-boilerplate-components';
+} from "astro-boilerplate-components";
 
 const Hero = () => (
   <Section>
@@ -15,15 +15,12 @@ const Hero = () => (
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{' '}
+          I come from Anhui, China. I am a front-end developer. I am glad to
+          share with you in this&nbsp;
           <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
-          </a>{' '}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
-          </a>{' '}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            space
+          </a>
+          .
         </>
       }
       avatar={

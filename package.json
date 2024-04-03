@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "dev:server": "cd services && yarn start",
-    "build": "nvm use && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "clean": "rimraf dist",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx,.astro .",
